@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <title>Circular Preloader</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="progress-container">
+            <svg class="progress-circle" width="300" height="300"> <!-- Increased size -->
+                <circle class="progress-background" cx="150" cy="150" r="120"></circle> <!-- Increased radius -->
+                <circle class="progress-bar" cx="150" cy="150" r="120"></circle> <!-- Increased radius -->
+            </svg>
+            <div class="progress-value" id="progressValue"></div>
+        </div>
+    </div>
+
+    <!-- Main Content (Initially Hidden) -->
+    <div class="container" style="display:none;">
+        <img src="cat.gif" alt="logo" class="logo"> <!-- Logo above the button -->
+        <button type="submit" id="submitButton">START</button>
+    </div>
+
+    <!-- Additional Content -->
+    <div id="mainContent" class="main-content" style="display:none;">
+        <div class="navbar">
+            <div class="site-logo"><img src="cat.gif" alt="logo" class="logo" width="100" height="75"></div>
+            <ul>
+                <li><a href="#" data-section="home">Home</a></li>
+                <li><a href="#" data-section="about">About</a></li>
+                <li><a href="#" data-section="projects">Projects</a></li>
+                <li><a href="#" data-section="contact">Contact</a></li>
+            </ul>
+        </div>
+        <!-- Content sections -->
+        <div id="home" class="content-section visible">
+            <h1>WELCOME TO MY PORTFOLIO</h1>
+            <p>
+                <span class="code-name" id="codeName">code: xeno<span class="dots">.</span></span>
+                <span class="real-name" id="realName">code: REUEL RAI</span> <!-- Initially hidden -->
+            </p>
+        </div>
+        
+        
+        <div id="about" class="content-section">
+            <h1>About Us</h1>
+            <p>This section contains information about us.</p>
+        </div>
+        <div id="projects" class="content-section">
+            <h1>My Projects</h1>
+            <p>Details about our experience go here.</p>
+        </div>
+        <div id="contact" class="content-section">
+            <h1>Contact Us</h1>
+            <p>Here you can find our contact information.</p>
+        </div>
+    </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
